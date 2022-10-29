@@ -1,0 +1,39 @@
+/* SOBRE MIM E SOBRE EDUCAÇÃO FÍSICA */
+.info {
+    justify-content: center;
+    align-items: center;
+}
+
+.sobre-mim .informacoes-sobre-mim, .sobre-educacao .informacoes-sobre-educacao {
+    max-width: 80%;
+    padding: 0 25px;
+    align-self: center;
+}
+
+.sobre-mim .informacoes-sobre-mim .botoes {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.sobre-mim .informacoes-sobre-mim p, .sobre-educacao .informacoes-sobre-educacao p {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+@media(max-width: 1280px) {
+    .sobre-mim .row {
+        justify-content: center;
+    }
+
+    .sobre-mim .informacoes-sobre-mim, .sobre-educacao .informacoes-sobre-educacao {
+        padding: 0 var(--mobile-padding);
+        text-align: center;
+    }
+}
+
+@media(max-width:768px) {
+    .sobre-mim .informacoes-sobre-mim, .sobre-educacao .informacoes-sobre-educacao {
+        max-width: 100%;
+    }
+}
