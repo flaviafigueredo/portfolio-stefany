@@ -1,27 +1,68 @@
 /* AULAS */
-.aulas .container-aulas {
-    display: grid;        
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    margin: 0 auto;
-    grid-gap: 20px;       
+.aulas .slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
 }
 
-@media(max-width: 1280px) { 
-    .aulas .container-aulas {
-        padding: 0 var(--mobile-padding);
-    }
+.aulas .slider .slides {
+    display: flex;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
 }
 
-.aulas .container-aulas .aula {
+.aulas .slide {
+    min-width: 100%;
+}
+
+.aulas .slide img {
+    width: 100%;
+    height: auto;
     border-radius: 5px;
+}
+
+.aulas .slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: var(--fonte-grande);
+    color: var(--cor-secundaria);
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
     transition: all 0.3s ease;
 }
 
-.aulas .container-aulas .aula:hover {
-    opacity: 0.8;
+.aulas .slider button:hover {
+    background: rgba(0, 0, 0, 0.10);
+    color: var(--cor-primaria);
 }
 
-.aulas .container-aulas .aula img {
-    border-radius: 5px;
-    height: 100%;
+.aulas .slider .prev {
+    left: 10px;
+}
+
+.aulas .slider .next {
+    right: 10px;
+}
+
+@media(max-width: 834px) {
+    .aulas .slider {
+        max-width: calc(100% - 30px);
+    }
+}
+
+@media(max-width: 375px) {
+    .aulas .slider button {
+        font-size: var(--fonte-normal);
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+
+    }
 }
